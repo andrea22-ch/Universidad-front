@@ -1,0 +1,24 @@
+<div class="container">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Titulo</td>
+        <td>Creditos</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of courses">
+        <td>{{item.CourseID}} </td>
+        <td>{{item.Title}} </td>
+        <td>{{item.Credits}} </td>
+        <td class="btn-group"><a href="" [routerLink]="['/course-edit' ,item.CourseID]" class="btn btn-sm btn-outline-warning">Editar</a>
+          <a href="" [routerLink]="['/course-delete' ,item.CourseID]" class="btn btn-sm btn-outline-danger">Eliminar</a>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

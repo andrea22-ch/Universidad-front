@@ -1,0 +1,42 @@
+<div class="container">
+
+  <h2>Editar Curso</h2>
+  <div class="form-row" *ngIf='!showMsg'>
+    <div class="alert alert-danger col-md-12" role="alert" >
+        <p>Estas seguro de eliminar el curso? </p>
+      <div class="btn-group">
+        <button class="btn btn-outline-danger" (click)="delete()">Eliminar</button>
+
+        <button class="btn btn-outline-danger" [routerLink]="['/course-list']">Atras</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <form #courseForm="ngForm">
+    <div class="form-row">
+
+      <div class="col-md-4">
+<label for="">Title</label>
+
+        <input type="text" id="Title" name="Title" class="form-control" #title [(ngModel)]="course.Title" />
+
+      </div>
+      <div class="col-md-4">
+<label for="">Creditos</label>
+
+        <input type="text" id="Credits" name="Credits" class="form-control" #credits [(ngModel)]="course.Credits" />
+
+      </div>
+
+    </div>
+    <br>
+
+
+  </form>
+<a href=""  [routerLink]="['/course-list']"> volver</a>
+</div>
+
+
